@@ -13,11 +13,11 @@ This project integrates Deep Q-Network (DQN) reinforcement learning with the SUM
   - *Pothole Detection*: Detects road defects like potholes, facilitating timely maintenance efforts to ensure road safety.
  
 ## Results
-![image](https://github.com/pranavsrinivasa/Traffic-Optimization-Projects/assets/126983069/aa624a3f-2e82-4f43-a14e-8cd58f6a8a81)
-![image](https://github.com/pranavsrinivasa/Traffic-Optimization-Projects/assets/126983069/30ab05a4-3f08-4f7b-9e32-278538460b41)
-![image](https://github.com/pranavsrinivasa/Traffic-Optimization-Projects/assets/126983069/d5225631-d1fa-4fba-b9ce-233f96e196e2)
-![image](https://github.com/pranavsrinivasa/Traffic-Optimization-Projects/assets/126983069/ac48f92b-6566-4657-ab1a-da21c79c0d4c)
-![image](https://github.com/pranavsrinivasa/Traffic-Optimization-Projects/assets/126983069/6ec29e1f-5aa2-4a35-b6cb-e77944488c04)
+- ![image](https://github.com/pranavsrinivasa/Traffic-Optimization-Projects/assets/126983069/aa624a3f-2e82-4f43-a14e-8cd58f6a8a81)
+- ![image](https://github.com/pranavsrinivasa/Traffic-Optimization-Projects/assets/126983069/30ab05a4-3f08-4f7b-9e32-278538460b41)
+  ![image](https://github.com/pranavsrinivasa/Traffic-Optimization-Projects/assets/126983069/d5225631-d1fa-4fba-b9ce-233f96e196e2)
+- ![image](https://github.com/pranavsrinivasa/Traffic-Optimization-Projects/assets/126983069/ac48f92b-6566-4657-ab1a-da21c79c0d4c)
+- ![image](https://github.com/pranavsrinivasa/Traffic-Optimization-Projects/assets/126983069/6ec29e1f-5aa2-4a35-b6cb-e77944488c04)
 
 
 ## Usage
