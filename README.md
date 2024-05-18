@@ -24,11 +24,19 @@ This project integrates Deep Q-Network (DQN) reinforcement learning with the SUM
 1. **Installation**:
    - Install required dependencies: SUMO, PyTorch, OpenCV, etc.
    - Download pre-trained YOLOv8 weights or train custom models as needed.
-   
+   - ```pip install requirements.txt```
+   - Install Ollama from https://ollama.com/ and hence install mistral model on cmd with the command
+     ```
+     ollama pull mistral
+     ```
+     
 2. **Configuration**:
    - Configure SUMO simulation environment and traffic scenarios.
    - Set up YOLOv8 models for traffic monitoring and detection tasks.
+   - Run Ollama application
    
 3. **Execution**:
    - Run the integrated system to initiate traffic simulation and monitoring.
    - Analyze results for traffic signal optimization, congestion detection, and pothole identification
+   - To run the app :
+     ``` streamlit run app.py ```
