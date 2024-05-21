@@ -1,4 +1,4 @@
-# Traffic Management System with Reinforcement Learning and Computer Vision
+![image](https://github.com/pranavsrinivasa/Traffic-Optimization-Projects/assets/126983069/fcca7526-ee34-4349-b4d2-908641af4ff4)# Traffic Management System with Reinforcement Learning and Computer Vision
 
 ## Overview
 This project integrates Deep Q-Network (DQN) reinforcement learning with the SUMO (Simulation of Urban MObility) traffic simulator for dynamic traffic signal control at intersections. Additionally, it incorporates YOLOv8 computer vision models for real-time traffic monitoring and detection of congestion and road hazards.
@@ -11,6 +11,10 @@ This project integrates Deep Q-Network (DQN) reinforcement learning with the SUM
 - **Custom YOLOv8 Models**:
   - *Congestion Detection*: Custom-trained YOLOv8 model identifies areas of traffic congestion, enabling proactive traffic management measures.
   - *Pothole Detection*: Detects road defects like potholes, facilitating timely maintenance efforts to ensure road safety.
+- A Locally Run ChatBot That can chat with the context of the results
+
+## Public Link:
+![link](https://huggingface.co/spaces/pr4nav101/Traffic_Optimization)
  
 ## Results
 - ![image](https://github.com/pranavsrinivasa/Traffic-Optimization-Projects/assets/126983069/aa624a3f-2e82-4f43-a14e-8cd58f6a8a81)
