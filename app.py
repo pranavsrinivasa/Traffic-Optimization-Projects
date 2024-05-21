@@ -319,9 +319,9 @@ elif page == "PS2":
                 out_csv_name='output',
                 use_gui=True,
                 single_agent=True,    
-                num_seconds=10000)
+                num_seconds=5000)
         model1 = DQN.load('PS2\DQN_MODELS\DQN_MODEL3.zip',env=env)
-        one,two = evaluate_policy(model1,env = env,n_eval_episodes=5,render=True)
+        one,two = evaluate_policy(model1,env = env,n_eval_episodes=2,render=True)
         st.write("Evaluation Results: ",one,two)
         import matplotlib.pyplot as plt
         def eval_plot(path,metric,path_compare = None):
