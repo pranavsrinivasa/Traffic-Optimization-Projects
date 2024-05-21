@@ -165,7 +165,7 @@ if page == 'PS1':
     else:
         st.error('PLEASE UPLOAD AN IMAGE OF THE FORMAT JPG,JPEG OR PNG', icon="🚨")
 
-elif page == "PS2":
+elif page == "PS3":
     uploaded_file1 = st.file_uploader("Choose a video...", type=["mp4", "mpeg"])
     if uploaded_file1 is not None:
         g = io.BytesIO(uploaded_file1.read()) 
@@ -300,8 +300,64 @@ elif page == "PS2":
     else:
         st.error('PLEASE UPLOAD AN IMAGE OF THE FORMAT JPG,JPEG OR PNG', icon="🚨")
 
-elif page == "PS3":
-    st.header("hello world")
+elif page == "PS2":
+    st.header("CLICK ON RUN SCRIPT TO START A TRAFFIC SIMULATION")
+    script = st.button("RUN SCRIPT")
+    st.session_state.con = -1
+    if script:
+        st.session_state.con += 1
+        import gymnasium as gym
+        import sumo_rl
+        import os
+        from stable_baselines3 import DQN
+        from stable_baselines3.common.vec_env import DummyVecEnv
+        from stable_baselines3.common.evaluation import evaluate_policy
+        from sumo_rl import SumoEnvironment
+        env = gym.make('sumo-rl-v0',
+                net_file='PS2\single-intersection.net.xml',
+                route_file='PS2\single-intersection-gen.rou.xml',
+                out_csv_name='output',
+                use_gui=True,
+                single_agent=True,    
+                num_seconds=10000)
+        model1 = DQN.load('PS2\DQN_MODELS\DQN_MODEL3.zip',env=env)
+        one,two = evaluate_policy(model1,env = env,n_eval_episodes=5,render=True)
+        st.write("Evaluation Results: ",one,two)
+        import matplotlib.pyplot as plt
+        def eval_plot(path,metric,path_compare = None):
+            data = pd.read_csv(path)
+            if path_compare is not None:
+                data1 = pd.read_csv(path_compare)
+            x = []
+            for i in range(0,len(data)):
+                x.append(i)
+
+            y = data[metric]
+            y_1 = pd.to_numeric(y)
+            y_arr = np.array(y_1)
+            if path_compare is not None:
+                y2 = data1[metric]
+                y_2 = pd.to_numeric(y2)
+                y_arr2 = np.array(y_2)
+
+            x_arr = np.array(x)
+
+            fig = plt.figure()
+            ax1 = fig.add_subplot(2, 1, 1)
+            ax1.set_title(metric)
+            if path_compare is not None:
+                ax2 = fig.add_subplot(2, 1, 2,sharey=ax1)
+                ax2.set_title('compare '+metric)
+
+            ax1.plot(x_arr,y_arr)
+            
+            if path_compare  is not None:
+                ax2.plot(x_arr,y_arr2)
+            
+            return fig
+        for i in range(1,2):
+            st.pyplot(eval_plot(f'output_conn{st.session_state.con}_ep{i}.csv','system_mean_waiting_time'))
+            st.pyplot(eval_plot(f'output_conn{st.session_state.con}_ep{i}.csv','agents_total_accumulated_waiting_time'))  
 
 elif page == "Chat with Results":
     st.title('Chat with the Results')
