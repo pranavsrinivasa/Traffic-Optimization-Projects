@@ -14,7 +14,7 @@ This project integrates Deep Q-Network (DQN) reinforcement learning with the SUM
 - A Locally Run ChatBot That can chat with the context of the results
 
 ## Public Link:
-![link](https://huggingface.co/spaces/pr4nav101/Traffic_Optimization)
+https://huggingface.co/spaces/pr4nav101/Traffic_Optimization
  
 ## Results
 - ![image](https://github.com/pranavsrinivasa/Traffic-Optimization-Projects/assets/126983069/aa624a3f-2e82-4f43-a14e-8cd58f6a8a81)
